@@ -1,0 +1,40 @@
+/* Contact Section Styles */
+
+.page-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    border-bottom: 2px solid #007acc;
+    padding-bottom: 0.5rem;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info {
+    background-color: #f7f7f7;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+}
+
+.contact-link {
+    font-size: 1rem;
+    color: #007acc;
+    transition: color 0.3s;
+}
+
+.contact-link:hover {
+    color: #00509e;
+}
+
+.response-time {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #888;
+}
+

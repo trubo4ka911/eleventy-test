@@ -1,0 +1,42 @@
+/* Archive header styling */
+.archive-header {
+	font-size: 2rem;
+	color: #333;
+	margin-bottom: 1rem;
+	font-weight: bold;
+	border-bottom: 2px solid #007acc;
+	padding-bottom: 0.5rem;
+}
+
+/* Posts list styling */
+.postlist {
+	list-style-type: none;
+	padding: 0;
+}
+
+.postlist-item {
+	margin: 15px 0;
+	padding: 10px;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.postlist-item-active {
+	background-color: #f8f8f8;
+}
+
+.postlist-link {
+	font-weight: bold;
+	text-decoration: none;
+	color: #007bff;
+	font-size: 1.1em;
+}
+
+.postlist-link:hover {
+	text-decoration: underline;
+}
+
+.postlist-date {
+	display: block;
+	font-size: 0.9em;
+	color: #777;
+}
