@@ -1,100 +1,95 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Base Styles */
 body {
-    font-family: "Arial", sans-serif;
-    background-color: #fafafa;
-    color: #333;
-    line-height: 1.6;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+	background-color: #fafafa;
+}
+body,
+html {
+	height: 100%;
 }
 
-a {
-    text-decoration: none;
-    color: #007acc;
-    transition: color 0.3s;
+main.container {
+	flex: 1 0 auto;
 }
 
-a:hover {
-    color: #00509e;
+/* This will establish a flex context and take at least the height of the viewport */
+.flex-container {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 1.5rem;
+/* This will make the content grow and take up all available space, pushing the footer down */
+.content {
+	flex: 1;
 }
 
-/* Main Header */
-header {
-    background-color: #ffffff;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header img {
-    max-width: 100px;
-    margin-right: 20px;
-}
-
-header nav {
-    display: flex;
-    gap: 20px;
-}
-.title{
+.title {
 	font-size: 2rem;
-    color: #333;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    border-bottom: 2px solid #007acc;
-    padding-bottom: 0.5rem;
+	border-bottom: 2px solid #007acc;
+	padding-bottom: 0.5rem;
 }
 
 .home-link {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #007acc;
+	font-weight: bold;
+}
+footer.footer {
+	flex-shrink: 0;
 }
 
-header nav a {
-    padding: 10px 20px;
-    background-color: #007acc;
-    color: #fff;
-    border-radius: 20px;
-    transition: background-color 0.3s, transform 0.3s;
+.site-footer {
+	background-color: #2c3e50;
+	padding: 30px 0;
+	color: #bdc3c7;
 }
 
-header nav a:hover {
-    background-color: #00509e;
-    transform: scale(1.05);
+.footer-content {
+	padding: 0 20px;
 }
 
-/* Main Content */
-main {
-    padding: 2rem 1rem;
-    background-color: #fff;
-    margin-top: 2rem;
-    border-radius: 5px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+.footer-section h4 {
+	color: #ecf0f1;
+	margin-bottom: 20px;
 }
 
-/* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
+.footer-links a:hover {
+	text-decoration: underline;
+}
+
+.footer-bottom {
+	font-size: 12px;
+}
+
+.footer-bottom p {
+	margin: 0;
+	text-align: center;
+}
+
+a {
+	color: #bdc3c7;
+}
+
+a:hover {
+	color: #ecf0f1;
+}
+/* Navbar styles */
+.navbar-nav {
+    display: flex;
+    justify-content: flex-end;
     width: 100%;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+	margin-left: auto;
+}
+
+.nav-item {
+    list-style: none; /* Remove bullet points */
+}
+
+.nav-link {
+    display: block;
+    padding: 10px 15px; /* Add some padding to each link */
+    color: black; /* Set link color */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-link:hover {
+    background-color: #f5f5f5; /* Change background color on hover */
 }
