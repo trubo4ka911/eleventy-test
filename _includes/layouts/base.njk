@@ -5,48 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ metadata.title }}</title>
-    <!-- You might have more meta tags and links to stylesheets here -->
     <link rel="stylesheet" href="/css/index.css">
-<link rel="stylesheet" href="/css/contact.css">
-<link rel="stylesheet" href="/css/about.css">
-<link rel="stylesheet" href="/css/archive.css">
-<link rel="stylesheet" href="/css/footer.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <header>
-        <!-- Logo Image -->
-        <img src="/assets/images/logo.png" alt="{{ metadata.title }} Logo" id="site-logo">
-
-         <!-- Site Title with Link -->
-        <a href="/" class="home-link">{{ metadata.title }}</a>
-
-        <!-- Static Navigation from nav.njk -->
-        {% include "layouts/nav.njk" %}
-
-        <!-- Dynamic Eleventy Navigation (you can choose either this or the static one, not both) 
-        <nav>
-            <h2 class="visually-hidden">Top level navigation menu</h2>
-            <ul class="nav">
-                {%- for entry in collections.all | eleventyNavigation %}
-                    <li class="nav-item"><a href="{{ entry.url }}">{{ entry.data.title }}</a></li>
-                {%- endfor %}
-            </ul>
-        </nav>-->
+<div class="flex-container">
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
+        <a href="/" class="navbar-brand">
+            <img src="/assets/images/logo.png" alt="{{ metadata.title }} Logo" width="75" height="75" class="d-inline-block align-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            {% include "layouts/nav.njk" %}
+        </div>
     </header>
 
-    <main id="skip">
+    <main class="container my-4">
         {{ content | safe }}
     </main>
 
-    <footer>
+    <footer class="footer bg-light py-3">
         {% include "layouts/footer.njk" %}
     </footer>
+</div>    
 </body>
-
 </html>

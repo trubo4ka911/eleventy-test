@@ -4,7 +4,7 @@ eleventyNavigation:
   key: Contact
   order: 4
 ---
-<h1 class="page-title">Contact</h1>
+<h1 class="title">Contact</h1>
 
 <p class="intro-text">
     If you have any questions, suggestions, or just want to say hello, feel free to get in touch with me.
