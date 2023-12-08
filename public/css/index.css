@@ -9,6 +9,15 @@ html {
 main.container {
 	flex: 1 0 auto;
 }
+ul {
+	list-style-type: none;
+}
+button,
+button:hover,
+button:focus,
+button:active {
+	outline: none;
+}
 
 /* This will establish a flex context and take at least the height of the viewport */
 .flex-container {
@@ -72,24 +81,121 @@ a:hover {
 }
 /* Navbar styles */
 .navbar-nav {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
 	margin-left: auto;
 }
 
 .nav-item {
-    list-style: none; /* Remove bullet points */
+	list-style: none; /* Remove bullet points */
 }
 
 .nav-link {
-    display: block;
-    padding: 10px 15px; /* Add some padding to each link */
-    color: black; /* Set link color */
-    text-decoration: none; /* Remove underline */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+	display: block;
+	padding: 10px 15px; /* Add some padding to each link */
+	color: black; /* Set link color */
+	text-decoration: none; /* Remove underline */
+	transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
 .nav-link:hover {
-    background-color: #f5f5f5; /* Change background color on hover */
+	background-color: #f5f5f5; /* Change background color on hover */
+}
+/* Tasks Section Styles */
+.tasks-section {
+	background: #ffffff;
+	padding: 2rem;
+	margin-top: 2rem;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tasks-section h1,
+.tasks-section h2,
+.tasks-section h3 {
+	color: #333;
+	padding-bottom: 0.5rem;
+}
+
+.tasks-section ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.tasks-section ul li {
+	background: #f9f9f9;
+	border-left: 4px solid #007acc;
+	margin-bottom: 0.5rem;
+	padding: 0.5rem 1rem;
+	transition: background-color 0.3s ease;
+}
+
+.tasks-section ul li:hover {
+	background-color: #eef2f7;
+}
+
+/* Recipe and Food List Styles */
+.times-table,
+.food-list,
+.recipe-details {
+	background: #fff;
+	padding: 1rem;
+	margin-top: 1rem;
+	border-left: 5px solid #28a745;
+}
+
+/* Add some space between list items */
+.times-table li,
+.food-list li,
+.recipe-details li {
+	background: #f9f9f9;
+	border-left: 4px solid #007acc;
+	margin-bottom: 0.5rem;
+	padding: 0.5rem 1rem;
+	transition: background-color 0.3s ease;
+}
+
+.times-table li:hover,
+.food-list li:hover,
+.recipe-details li:hover {
+	background-color: #eef2f7;
+}
+
+/* Style for the button to call the function */
+.cook-btn {
+	background-color: #007bff;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	margin-top: 1rem;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.cook-btn:hover {
+	background-color: #0056b3;
+}
+
+/* Times Table Button Styles */
+.numbers-table-buttons {
+	margin-bottom: 20px;
+}
+
+.btn-numbers-table {
+	background-color: #007bff;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	margin: 5px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.btn-numbers-table:hover {
+	background-color: #0056b3;
+	outline: none;
 }
