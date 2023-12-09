@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+export function calculations(){
 	const getNumberValue = (id) => parseFloat(document.getElementById(id)?.value);
 	const setTextContent = (id, text) => {
 		const element = document.getElementById(id);
@@ -75,4 +75,4 @@ document.addEventListener("DOMContentLoaded", () => {
 					: `${number1} ${operator} ${number2} = ${calculationResult}`
 			);
 		});
-});
+};

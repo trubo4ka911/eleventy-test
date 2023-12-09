@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-title: My Tasks
+title: Numbers
 ---
 
 <h1 class="title tasks-section">My Tasks</h1>

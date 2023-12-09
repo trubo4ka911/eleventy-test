@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+export function numbers() {
   
   const generateTimesTable = (number) => {
     if (!number) return '';
@@ -53,4 +53,4 @@ document.addEventListener("DOMContentLoaded", () => {
     ${displayFavouriteRecipe(favouriteRecipe)}
     ${letsCook(favouriteRecipe.title)}
   `;
-});
+};
