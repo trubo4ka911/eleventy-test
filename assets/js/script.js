@@ -1,76 +1,56 @@
-document.addEventListener("DOMContentLoaded", function () {
-	// Task 1: 7 Times Table
-	// Function to generate times table
-	function generateTimesTable(number) {
-		if (!number) return ""; // If number is not defined, return empty string
+document.addEventListener("DOMContentLoaded", () => {
+  
+  const generateTimesTable = (number) => {
+    if (!number) return '';
+    return `
+      <h3 class='title'>${number} Times Table</h3>
+      <ul class='times-table'>
+        ${Array.from({ length: 12 }, (_, i) => `<li>${number} x ${i + 1} = ${number * (i + 1)}</li>`).join('')}
+      </ul>
+    `;
+  };
 
-		let htmlContent = `<h3 class='title'>${number} Times Table</h3><ul class='times-table'>`;
-		for (let i = 1; i <= 12; i++) {
-			htmlContent += `<li>${number} x ${i} = ${number * i}</li>`;
-		}
-		htmlContent += "</ul>";
-		return htmlContent;
-	}
+  const listFavouriteFoods = (foods) => `
+    <h2 class='title'>My Favourite Foods</h2>
+    <ul class='food-list'>
+      ${foods.map(food => `<li>${food}</li>`).join('')}
+    </ul>
+  `;
 
-	// Event delegation to handle button clicks
-	document
-		.querySelector(".numbers-table-buttons")
-		.addEventListener("click", function (event) {
-			if (event.target.classList.contains("btn-numbers-table")) {
-				const number = parseInt(event.target.getAttribute("data-number"), 10); // Convert the number to an integer
-				document.getElementById("timesTableOutput").innerHTML =
-					generateTimesTable(number);
-			}
-		});
+  const displayFavouriteRecipe = (recipe) => `
+    <h2 class='title'>My Favourite Recipe: ${recipe.title}</h2>
+    <h3>Ingredients</h3>
+    <ul class='recipe-details'>
+      ${recipe.ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
+    </ul>
+    <h3>Directions</h3>
+    <ol>
+      ${recipe.directions.map(step => `<li>${step}</li>`).join('')}
+    </ol>
+  `;
 
-	// Task 2: List Favourite Foods
-	const favouriteFoods = ["Pizza", "Pasta", "Ice Cream", "Sushi"];
-	function listFavouriteFoods() {
-		let htmlContent =
-			"<h2 class='title'>My Favourite Foods</h2><ul class='food-list'>";
-		favouriteFoods.forEach((food) => {
-			htmlContent += `<li>${food}</li>`;
-		});
-		return htmlContent + "</ul>";
-	}
+  const letsCook = (recipeTitle) => `
+    <button class='cook-btn'>I'm hungry! Let's cook ${recipeTitle}.</button>
+  `;
 
-	// Task 4: Favourite Recipe Object
-	const favouriteRecipe = {
-		title: "Spaghetti Carbonara",
-		ingredients: ["Spaghetti", "Eggs", "Bacon", "Parmesan Cheese"],
-		directions: [
-			"Boil pasta",
-			"Fry bacon",
-			"Mix eggs and cheese",
-			"Combine everything",
-		],
-	};
+  document.querySelector(".numbers-table-buttons").addEventListener("click", (event) => {
+    if (event.target.classList.contains("btn-numbers-table")) {
+      const number = parseInt(event.target.dataset.number, 10);
+      document.getElementById("timesTableOutput").innerHTML = generateTimesTable(number);
+    }
+  });
 
-	function displayFavouriteRecipe() {
-		let htmlContent = `<h2 class='title'>My Favourite Recipe: ${favouriteRecipe.title}</h2><ul class='recipe-details'>`;
-		htmlContent += "<h3>Ingredients</h3>";
-		favouriteRecipe.ingredients.forEach((ingredient) => {
-			htmlContent += `<li>${ingredient}</li>`;
-		});
-		htmlContent += "</ul><h3>Directions</h3><ol>";
-		favouriteRecipe.directions.forEach((step) => {
-			htmlContent += `<li>${step}</li>`;
-		});
-		return htmlContent + "</ol>";
-	}
+  const favouriteFoods = ["Pizza", "Pasta", "Ice Cream", "Sushi"];
+  const favouriteRecipe = {
+    title: "Spaghetti Carbonara",
+    ingredients: ["Spaghetti", "Eggs", "Bacon", "Parmesan Cheese"],
+    directions: ["Boil pasta", "Fry bacon", "Mix eggs and cheese", "Combine everything"]
+  };
 
-	// Task 5: Let's Cook Function
-	function letsCook() {
-		return `<button class='cook-btn'>I'm hungry! Let's cook ${favouriteRecipe.title}.</button>`;
-	}
-
-	// Insert the generated HTML into the page
-	const tasksOutput = document.getElementById("tasksOutput");
-	if (tasksOutput) {
-		tasksOutput.innerHTML =
-			generateTimesTable() +
-			listFavouriteFoods() +
-			displayFavouriteRecipe() +
-			letsCook();
-	}
+  const tasksOutput = document.getElementById("tasksOutput");
+  tasksOutput.innerHTML = `
+    ${listFavouriteFoods(favouriteFoods)}
+    ${displayFavouriteRecipe(favouriteRecipe)}
+    ${letsCook(favouriteRecipe.title)}
+  `;
 });

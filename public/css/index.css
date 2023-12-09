@@ -199,3 +199,57 @@ a:hover {
 	background-color: #0056b3;
 	outline: none;
 }
+
+/* Calculation Section Styles */
+.calculation-section {
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	margin: 20px;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.calculation-section h1,
+.calculation-section h2 {
+	color: #333;
+	margin-bottom: 10px;
+}
+
+.calculation-section input[type="number"] {
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin-right: 5px;
+	border-radius: 4px;
+}
+
+.calculation-section select {
+	padding: 10px;
+	margin-right: 5px;
+	border-radius: 4px;
+}
+
+.calculation-section button {
+	background-color: #007bff;
+	color: white;
+	border: none;
+	padding: 10px 15px;
+	border-radius: 4px;
+	transition: background-color 0.3s ease;
+}
+
+.calculation-section button:hover {
+	background-color: #0056b3;
+}
+
+/* Result Display Styles */
+#percentageResult,
+#drinkResult,
+#calculationResult {
+	background-color: #e7f5ff;
+	padding: 10px;
+	border-radius: 4px;
+	margin-top: 10px;
+}
