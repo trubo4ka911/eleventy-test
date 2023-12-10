@@ -21,12 +21,28 @@ title: Shopping Cart Calculations
 </div>
 
 <!-- The Modal for Discount Type -->
-<div id="myModal" class="modal">
+<div id="myModalType" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
-    <input type="text" id="modalInput" placeholder="Enter value">
-    <button id="modalSubmit">Submit</button>
+    <p>Select discount type:</p>
+    <select id="modalSelect">
+      <option value="food">Food</option>
+      <option value="clothing">Clothing</option>
+      <option value="educational">Educational</option>
+      <option value="any">Any</option>
+    </select>
+    <button class='modalSubmit' id="modalSubmitType">Submit</button>
+  </div>
+</div>
+
+<!-- The Modal for Discount Amount -->
+<div id="myModalAmount" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Enter discount amount (without % sign):</p>
+    <input type="number" id="modalInputAmount" placeholder="Enter value">
+    <button class='modalSubmit' id="modalSubmitAmount">Submit</button>
   </div>
 </div>

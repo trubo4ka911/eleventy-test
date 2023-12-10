@@ -287,8 +287,9 @@ a:hover {
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
-	margin-right: 5px;
+	margin: 15px 5px 15px 0px;
 	font-size: 14px;
+	outline: none;
 }
 
 #shoppingCartApp button:hover {
@@ -356,13 +357,14 @@ a:hover {
 	cursor: pointer;
 }
 
-#modalInput {
+#myModalType,
+#myModalAmount {
 	width: 95%;
 	padding: 10px;
 	margin-top: 20px;
 }
 
-#modalSubmit {
+.modalSubmit {
 	width: 100px;
 	padding: 10px;
 	background-color: #007bff;
@@ -374,4 +376,11 @@ a:hover {
 
 #modalSubmit:hover {
 	background-color: #0056b3;
+}
+.filtered-item {
+	background-color: #e7f5ff;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	border-left: 5px solid #007bff;
 }
