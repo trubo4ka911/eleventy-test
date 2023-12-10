@@ -1,0 +1,22 @@
+.navbar-nav {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	margin-left: auto;
+}
+
+.nav-item {
+	list-style: none; /* Remove bullet points */
+}
+
+.nav-link {
+	display: block;
+	padding: 10px 15px; /* Add some padding to each link */
+	color: black; /* Set link color */
+	text-decoration: none; /* Remove underline */
+	transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-link:hover {
+	background-color: #f5f5f5; /* Change background color on hover */
+}

@@ -1,0 +1,35 @@
+body {
+	background-color: #fafafa;
+	margin: 0;
+	font-family: Arial, sans-serif;
+	background-color: #f4f4f4;
+	color: #333;
+}
+body,
+html {
+	height: 100%;
+}
+main.container {
+	flex: 1 0 auto;
+}
+ul {
+	list-style-type: none;
+}
+button,
+button:hover,
+button:focus,
+button:active {
+	outline: none;
+}
+
+/* This will establish a flex context and take at least the height of the viewport */
+.flex-container {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+/* This will make the content grow and take up all available space, pushing the footer down */
+.content {
+	flex: 1;
+}
