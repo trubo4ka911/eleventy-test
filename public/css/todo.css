@@ -1,0 +1,42 @@
+.container {
+	max-width: 800px;
+	margin: auto;
+	padding: 20px;
+	background: white;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#todo {
+	margin-bottom: 20px;
+}
+
+#todo-pane li {
+	cursor: pointer;
+	padding: 5px 10px;
+	border: 1px solid #ddd;
+	margin-bottom: 5px;
+	list-style-type: none;
+	display: flex;
+	align-items: center;
+}
+
+#todo-pane img {
+	margin-right: 10px;
+}
+
+#todo-pane li:hover {
+	background-color: #f8f9fa;
+}
+
+footer {
+	margin-top: 20px;
+}
+
+footer small a {
+	color: #007bff;
+}
+
+footer small a:hover {
+	text-decoration: underline;
+}
